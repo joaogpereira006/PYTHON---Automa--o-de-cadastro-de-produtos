@@ -15,12 +15,9 @@ Este projeto foi realizado como um exercício prático durante uma live da **Has
 1.  **Acesso ao Sistema:** Abre o navegador Chrome e acessa a URL específica.
 2.  **Autenticação:** Realiza o login automático com usuário e senha na plataforma.
 3.  **Processamento de Dados:** Lê uma base de dados externa (CSV) contendo informações como Código, Marca, Tipo, Categoria e Preço.
-
-https://github.com/user-attachments/assets/e16b0717-ba90-443b-87e6-13f407c3b254
-
-
 4.  **Loop de Cadastro:** Preenche automaticamente cada campo do formulário para cada linha da planilha.
 5.  **Envio de Dados:** Confirma o cadastro e reinicia o processo para o próximo item.
 
 ## ⚠️ Observação Técnica
 Este script utiliza coordenadas de tela baseadas na resolução do meu monitor. Para rodar em outras máquinas, é necessário ajustar os pontos de clique ou utilizar o modo de busca por imagem do PyAutoGUI.
+https://github.com/user-attachments/assets/e16b0717-ba90-443b-87e6-13f407c3b254
