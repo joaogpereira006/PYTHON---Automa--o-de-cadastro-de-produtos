@@ -20,4 +20,33 @@ Este projeto foi realizado como um exercício prático durante uma live da **Has
 
 ## ⚠️ Observação Técnica
 Este script utiliza coordenadas de tela baseadas na resolução do meu monitor. Para rodar em outras máquinas, é necessário ajustar os pontos de clique ou utilizar o modo de busca por imagem do PyAutoGUI.
+
+
 https://github.com/user-attachments/assets/e16b0717-ba90-443b-87e6-13f407c3b254
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
