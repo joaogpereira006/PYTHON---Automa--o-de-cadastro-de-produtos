@@ -1,6 +1,6 @@
 # passo a passo do programa
 
-# (cadastro de produtos - aula 1:automação)
+# (cadastro de produtos - automação)
 
 #bibliotecas
 import pyautogui
