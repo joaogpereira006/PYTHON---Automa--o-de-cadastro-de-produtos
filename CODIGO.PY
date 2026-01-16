@@ -3,49 +3,49 @@
 # (cadastro de produtos - automação)
 
 #bibliotecas
-import pyautogui
+import pyautogui as py
 import time
 
-pyautogui.alert("A automação vai começar. Não mexa no mouse/teclado!")
+py.alert("A automação vai começar. Não mexa no mouse/teclado!")
 
 #colinha
 
-#pyautogui.click -> clica                         
-#pyautogui.write -> escreve
-#pyautogui.press -> aperta tecla
-#pyautogui.hotkey -> aperta atalho (hotkey)
+#py.click -> clica                         
+#py.write -> escreve
+#py.press -> aperta tecla
+#py.hotkey -> aperta atalho (hotkey)
 
 #passo 1: Entrar no sistema
 #abrir navegador
 
 link='https://dlp.hashtagtreinamentos.com/python/intensivao/login'
 
-pyautogui.PAUSE = 0.5
-pyautogui.press('win')
-pyautogui.write('chrome')
-pyautogui.press('enter')
+py.PAUSE = 0.5
+py.press('win')
+py.write('chrome')
+py.press('enter')
 
-pyautogui.write(link)
-pyautogui.press('enter')
+py.write(link)
+py.press('enter')
 # fazer uma pausa para carregar o site
 time.sleep(3)
 
 # passo 2: Fazer login
 
 #click no campo (login)
-pyautogui.click(x=769, y=408)
-pyautogui.write('login') # escreve o login
-pyautogui.press('tab') #passa para o prox. campo
-pyautogui.write('senhadificilantihack') #escreve a senha
-pyautogui.press('tab') #passa para o botão (enter)
-pyautogui.press('enter')
+py.click(x=769, y=408)
+py.write('login') # escreve o login
+py.press('tab') #passa para o prox. campo
+py.write('senhadificilantihack') #escreve a senha
+py.press('tab') #passa para o botão (enter)
+py.press('enter')
 #fazer uma pausa para carregar o site
 time.sleep(3)
 
 # Passo 3: Abrir base de dados e importar o arquivo csv
-import pandas
+import pandas as pd
 
-tabela = pandas.read_csv('produtos.csv')
+tabela = pd.read_csv('produtos.csv')
 print(tabela)
 
 for linha in tabela.index:
@@ -53,47 +53,47 @@ for linha in tabela.index:
     # passo 4: cadastrar um produto
     #código do produto
 
-    pyautogui.click(x=855, y=292) #clica no campo (cod do produto)
+    py.click(x=855, y=292) #clica no campo (cod do produto)
     codigo = str(tabela.loc[linha, 'codigo'])
     
-    pyautogui.write(codigo)
-    pyautogui.press('tab') #passa para o prox campo
+    py.write(codigo)
+    py.press('tab') #passa para o prox campo
     
     #marca
     marca = str(tabela.loc[linha, 'marca'])
-    pyautogui.write(marca)
-    pyautogui.press('tab')
+    py.write(marca)
+    py.press('tab')
    
      #tipo
     tipo = str(tabela.loc[linha, 'tipo'])
-    pyautogui.write(tipo)
-    pyautogui.press('tab')
+    py.write(tipo)
+    py.press('tab')
    
     #categoria
     categoria  = str(tabela.loc[linha, 'categoria'])
-    pyautogui.write(categoria)
-    pyautogui.press('tab')
+    py.write(categoria)
+    pyi.press('tab')
    
     #preco
     preco = str(tabela.loc[linha, 'preco_unitario'])
-    pyautogui.write(preco)
-    pyautogui.press('tab')
+    py.write(preco)
+    py.press('tab')
    
     #custo
     custo = str(tabela.loc[linha, 'custo']) 
-    pyautogui.write(custo)
-    pyautogui.press('tab')
+    py.write(custo)
+    py.press('tab')
    
     #obs
     obs = str(tabela.loc[linha, 'obs'])
-    if obs!= 'nan': # se ob !=(diferente) de nan (vazio) -(pula obs)
-         pyautogui.write(obs)
-    pyautogui.press('tab') #passa para o botão enviar
+    if obs!= 'nan': # se obs !=(diferente) de nan (vazio) -(pula obs)
+         py.write(obs)
+    py.press('tab') #passa para o botão enviar
 
-    pyautogui.press('enter') #clica em enviar
+    py.press('enter') #clica em enviar
     
     # voltar para o inicio da tela (topo do site)
-    pyautogui.scroll(5000)
+    py.scroll(5000)
 
 
 # passo 5: Repetir os cadastros (passo 4) até acabar a lista
