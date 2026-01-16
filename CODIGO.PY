@@ -72,7 +72,7 @@ for linha in tabela.index:
     #categoria
     categoria  = str(tabela.loc[linha, 'categoria'])
     py.write(categoria)
-    pyi.press('tab')
+    py.press('tab')
    
     #preco
     preco = str(tabela.loc[linha, 'preco_unitario'])
